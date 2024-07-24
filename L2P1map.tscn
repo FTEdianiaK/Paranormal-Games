@@ -1,0 +1,147 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://L2P1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/L2/living_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/L2/living_3.png" type="Texture" id=4]
+[ext_resource path="res://assets/L2/living_5.png" type="Texture" id=5]
+[ext_resource path="res://assets/L2/living_2.png" type="Texture" id=6]
+[ext_resource path="res://assets/L2/living_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/L2/living_6.png" type="Texture" id=8]
+[ext_resource path="res://assets/L2/living_7.png" type="Texture" id=9]
+[ext_resource path="res://assets/L2/living_8.png" type="Texture" id=10]
+[ext_resource path="res://L2P1map.gd" type="Script" id=11]
+[ext_resource path="res://assets/SFX/Scream2.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/SFX/Scream1.ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/SFX/Scream4.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/SFX/Scream3.ogg" type="AudioStream" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.9139, 29.3061 )
+
+[node name="TileMap" type="TileMap"]
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( -131076, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -196603, 1, 0, -196602, 1, 0, -196601, 1, 0, -196600, 1, 0, -196599, 1, 0, -196598, 1, 0, -196597, 1, 0, -196596, 1, 0, -196595, 1, 0, -196594, 1, 0, -196593, 1, 0, -196592, 1, 0, -196591, 1, 0, -196590, 1, 0, -196589, 1, 0, -196588, 1, 0, -196587, 1, 0, -196586, 1, 0, -196585, 1, 0, -196584, 1, 0, -196583, 1, 0, -196582, 1, 0, -196581, 1, 0, -196580, 1, 0, -196579, 1, 0, -196578, 1, 0, -196577, 1, 0, -196576, 1, 0, -196575, 1, 0, -65540, 1, 0, -131039, 1, 0, -4, 1, 0, -65503, 1, 0, 65532, 1, 0, 33, 1, 0, 131068, 1, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65562, 0, 0, 65563, 0, 0, 65564, 0, 0, 65569, 1, 0, 196604, 1, 0, 131073, 0, 0, 131100, 0, 0, 131105, 1, 0, 262140, 1, 0, 196609, 0, 0, 196636, 0, 0, 196641, 1, 0, 327676, 1, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262170, 0, 0, 262171, 0, 0, 262172, 0, 0, 262173, 0, 0, 262177, 1, 0, 393212, 1, 0, 327680, 0, 0, 327709, 0, 0, 327713, 1, 0, 458748, 1, 0, 393216, 0, 0, 393245, 0, 0, 393249, 1, 0, 524284, 1, 0, 458752, 0, 0, 458781, 0, 0, 458785, 1, 0, 589820, 1, 0, 524288, 0, 0, 524289, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524321, 1, 0, 655356, 1, 0, 589824, 0, 0, 589826, 0, 0, 589853, 0, 0, 589857, 1, 0, 720892, 1, 0, 655360, 0, 0, 655363, 0, 0, 655389, 0, 0, 655393, 1, 0, 786428, 1, 0, 720896, 0, 0, 720900, 0, 0, 720925, 0, 0, 720929, 1, 0, 851964, 1, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0, 786451, 0, 0, 786452, 0, 0, 786453, 0, 0, 786454, 0, 0, 786455, 0, 0, 786460, 0, 0, 786461, 0, 0, 786465, 1, 0, 917500, 1, 0, 851968, 0, 0, 851995, 0, 0, 851997, 0, 0, 852001, 1, 0, 983036, 1, 0, 917504, 0, 0, 917530, 0, 0, 917533, 0, 0, 917537, 1, 0, 1048572, 1, 0, 983040, 0, 0, 983065, 0, 0, 983069, 0, 0, 983073, 1, 0, 1114108, 1, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0, 1048605, 0, 0, 1048609, 1, 0, 1179644, 1, 0, 1114145, 1, 0, 1245180, 1, 0, 1179681, 1, 0, 1310716, 1, 0, 1245217, 1, 0, 1376252, 1, 0, 1376253, 1, 0, 1376254, 1, 0, 1376255, 1, 0, 1310720, 1, 0, 1310721, 1, 0, 1310722, 1, 0, 1310723, 1, 0, 1310724, 1, 0, 1310725, 1, 0, 1310726, 1, 0, 1310727, 1, 0, 1310728, 1, 0, 1310729, 1, 0, 1310730, 1, 0, 1310731, 1, 0, 1310732, 1, 0, 1310733, 1, 0, 1310734, 1, 0, 1310735, 1, 0, 1310736, 1, 0, 1310737, 1, 0, 1310738, 1, 0, 1310739, 1, 0, 1310740, 1, 0, 1310741, 1, 0, 1310742, 1, 0, 1310743, 1, 0, 1310744, 1, 0, 1310745, 1, 0, 1310746, 1, 0, 1310747, 1, 0, 1310748, 1, 0, 1310749, 1, 0, 1310750, 1, 0, 1310751, 1, 0, 1310752, 1, 0, 1310753, 1, 0 )
+script = ExtResource( 11 )
+
+[node name="P1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 359.253, 833.159 )
+scale = Vector2( 2, 2 )
+
+[node name="Camera2D" type="Camera2D" parent="P1"]
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Live1" type="Area2D" parent="."]
+position = Vector2( 447.093, 395.463 )
+scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="norm" type="Sprite" parent="Live1"]
+texture = ExtResource( 3 )
+
+[node name="scared" type="Sprite" parent="Live1"]
+visible = false
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Live1"]
+shape = SubResource( 1 )
+
+[node name="scream1" type="AudioStreamPlayer" parent="Live1"]
+stream = ExtResource( 13 )
+
+[node name="Live2" type="Area2D" parent="."]
+position = Vector2( 1885.79, 1932.3 )
+scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="norm" type="Sprite" parent="Live2"]
+texture = ExtResource( 4 )
+
+[node name="scared" type="Sprite" parent="Live2"]
+visible = false
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Live2"]
+shape = SubResource( 1 )
+
+[node name="scream2" type="AudioStreamPlayer" parent="Live2"]
+stream = ExtResource( 12 )
+
+[node name="Live3" type="Area2D" parent="."]
+position = Vector2( 2169.57, 1418.72 )
+scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="norm" type="Sprite" parent="Live3"]
+texture = ExtResource( 5 )
+
+[node name="scared" type="Sprite" parent="Live3"]
+visible = false
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Live3"]
+shape = SubResource( 1 )
+
+[node name="scream3" type="AudioStreamPlayer" parent="Live3"]
+stream = ExtResource( 15 )
+
+[node name="Live4" type="Area2D" parent="."]
+position = Vector2( 1410.25, 904.75 )
+scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="norm" type="Sprite" parent="Live4"]
+texture = ExtResource( 9 )
+
+[node name="scared" type="Sprite" parent="Live4"]
+visible = false
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Live4"]
+shape = SubResource( 1 )
+
+[node name="scream4" type="AudioStreamPlayer" parent="Live4"]
+stream = ExtResource( 14 )
+
+[node name="Live5" type="Area2D" parent="."]
+position = Vector2( 2860.47, 906.795 )
+scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="norm" type="Sprite" parent="Live5"]
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="scared" type="Sprite" parent="Live5"]
+visible = false
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Live5"]
+shape = SubResource( 1 )
+
+[node name="scream5" type="AudioStreamPlayer" parent="Live5"]
+stream = ExtResource( 13 )
+[connection signal="area_entered" from="Live1" to="." method="_on_Live1_area_entered"]
+[connection signal="finished" from="Live1/scream1" to="." method="_on_scream1_finished"]
+[connection signal="area_entered" from="Live2" to="." method="_on_Live2_area_entered"]
+[connection signal="finished" from="Live2/scream2" to="." method="_on_scream2_finished"]
+[connection signal="area_entered" from="Live3" to="." method="_on_Live3_area_entered"]
+[connection signal="finished" from="Live3/scream3" to="." method="_on_scream3_finished"]
+[connection signal="area_entered" from="Live4" to="." method="_on_Live4_area_entered"]
+[connection signal="finished" from="Live4/scream4" to="." method="_on_scream4_finished"]
+[connection signal="area_entered" from="Live5" to="." method="_on_Live5_area_entered"]
+[connection signal="finished" from="Live5/scream5" to="." method="_on_scream5_finished"]

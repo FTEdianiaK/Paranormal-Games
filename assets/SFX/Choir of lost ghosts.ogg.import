@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Choir of lost ghosts.ogg-5a2a445d144fcbabc2638bf7bdc50f8f.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/Choir of lost ghosts.ogg"
+dest_files=[ "res://.import/Choir of lost ghosts.ogg-5a2a445d144fcbabc2638bf7bdc50f8f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

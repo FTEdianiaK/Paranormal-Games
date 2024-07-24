@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://L0map.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/SFX/Go up.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Viewport02.gd" type="Script" id=3]
+[ext_resource path="res://Viewport01.gd" type="Script" id=4]
+[ext_resource path="res://assets/Kenney Future.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://L0.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 5 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer1" type="ViewportContainer" parent="HBoxContainer"]
+margin_right = 477.0
+margin_bottom = 540.0
+size_flags_horizontal = 3
+stretch = true
+
+[node name="Viewport1" type="Viewport" parent="HBoxContainer/ViewportContainer1"]
+handle_input_locally = false
+render_target_update_mode = 3
+script = ExtResource( 4 )
+
+[node name="TileMap" parent="HBoxContainer/ViewportContainer1/Viewport1" instance=ExtResource( 1 )]
+
+[node name="ViewportContainer2" type="ViewportContainer" parent="HBoxContainer"]
+margin_left = 482.0
+margin_right = 960.0
+margin_bottom = 540.0
+size_flags_horizontal = 3
+stretch = true
+
+[node name="Viewport2" type="Viewport" parent="HBoxContainer/ViewportContainer2"]
+handle_input_locally = false
+render_target_update_mode = 3
+script = ExtResource( 3 )
+
+[node name="TileMap" parent="HBoxContainer/ViewportContainer2/Viewport2" instance=ExtResource( 1 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -15.0
+autoplay = true
+
+[node name="Tutorial" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tutorial"]
+margin_left = 166.0
+margin_top = 256.0
+margin_right = 794.0
+margin_bottom = 283.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Tutorial/HBoxContainer"]
+margin_top = 3.0
+margin_right = 582.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 1 )
+text = "Press w/up repeatedly to get to the surface!"
+
+[node name="Button" type="Button" parent="Tutorial/HBoxContainer"]
+margin_left = 586.0
+margin_right = 628.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 2 )
+shortcut_in_tooltip = false
+text = "OK"
+[connection signal="pressed" from="Tutorial/HBoxContainer/Button" to="." method="_on_Button_pressed"]

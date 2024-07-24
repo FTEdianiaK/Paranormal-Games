@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Para-fight.ogg-4dc4bd833cf85f450fd624002a15f3ef.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/Para-fight.ogg"
+dest_files=[ "res://.import/Para-fight.ogg-4dc4bd833cf85f450fd624002a15f3ef.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

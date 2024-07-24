@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/nine.png" type="Texture" id=1]
+[ext_resource path="res://assets/players/player2/Player2.png" type="Texture" id=2]
+[ext_resource path="res://assets/players/player1/Player1.png" type="Texture" id=3]
+[ext_resource path="res://assets/L3/Capture_6.png" type="Texture" id=4]
+[ext_resource path="res://assets/L3/Capture_5.png" type="Texture" id=5]
+[ext_resource path="res://assets/L3/Capture_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/L3/Capture_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/L3/Capture_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/L3/Capture_4.png" type="Texture" id=9]
+[ext_resource path="res://assets/SFX/Para-fight.ogg" type="AudioStream" id=10]
+[ext_resource path="res://L3.gd" type="Script" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "default",
+"speed": 2.0
+} ]
+
+[node name="Node" type="Node"]
+script = ExtResource( 11 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nine1" type="NinePatchRect" parent="HBoxContainer"]
+margin_right = 477.0
+margin_bottom = 540.0
+size_flags_horizontal = 3
+texture = ExtResource( 1 )
+
+[node name="Ghost1" type="Sprite" parent="HBoxContainer/Nine1"]
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 150, 200 )
+
+[node name="Tween" type="Tween" parent="HBoxContainer/Nine1/Ghost1"]
+
+[node name="Capture1" type="AnimatedSprite" parent="HBoxContainer/Nine1"]
+position = Vector2( 425, 260 )
+frames = SubResource( 1 )
+
+[node name="Nine2" type="NinePatchRect" parent="HBoxContainer"]
+margin_left = 482.0
+margin_right = 960.0
+margin_bottom = 540.0
+size_flags_horizontal = 3
+texture = ExtResource( 1 )
+
+[node name="Ghost2" type="Sprite" parent="HBoxContainer/Nine2"]
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 150, 200 )
+
+[node name="Tween" type="Tween" parent="HBoxContainer/Nine2/Ghost2"]
+
+[node name="Capture2" type="AnimatedSprite" parent="HBoxContainer/Nine2"]
+position = Vector2( 425, 260 )
+frames = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

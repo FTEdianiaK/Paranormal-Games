@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Scream4.ogg-9575bda519f235d191f7435a5f1ae9c0.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/Scream4.ogg"
+dest_files=[ "res://.import/Scream4.ogg-9575bda519f235d191f7435a5f1ae9c0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

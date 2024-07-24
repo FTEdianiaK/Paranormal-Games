@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tie.ogg-f66de54548b0ca05b2f110e1d1aa228d.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/tie.ogg"
+dest_files=[ "res://.import/tie.ogg-f66de54548b0ca05b2f110e1d1aa228d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/winP1.ogg-0c0b04acec24ffa35a81c65849803e67.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/winP1.ogg"
+dest_files=[ "res://.import/winP1.ogg-0c0b04acec24ffa35a81c65849803e67.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

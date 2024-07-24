@@ -1,0 +1,191 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/players/player2/Player2.png" type="Texture" id=2]
+[ext_resource path="res://assets/players/player1/dissappearing/Player1_3.png" type="Texture" id=3]
+[ext_resource path="res://assets/players/player1/dissappearing/Player1_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/players/player2/dissappearing/Player2_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/players/player2/dissappearing/Player2_4.png" type="Texture" id=6]
+[ext_resource path="res://assets/SFX/winP1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/players/player1/dissappearing/Player1_1.png" type="Texture" id=8]
+[ext_resource path="res://assets/SFX/To the grave and under.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/players/player1/Player1.png" type="Texture" id=10]
+[ext_resource path="res://assets/players/player2/dissappearing/Player2_3.png" type="Texture" id=11]
+[ext_resource path="res://assets/players/player1/dissappearing/Player1_4.png" type="Texture" id=12]
+[ext_resource path="res://assets/players/player2/dissappearing/Player2_1.png" type="Texture" id=13]
+[ext_resource path="res://assets/SFX/tie.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/SFX/winP2.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/Kenney Future.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://assets/nine.png" type="Texture" id=17]
+[ext_resource path="res://L5.gd" type="Script" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 16 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 18 )
+
+[node name="Container" type="Node" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Container"]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 0, 5, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 5, 0, 12, 5, 0, 13, 4, 0, 14, 5, 0, 65536, 2, 0, 65537, 2, 0, 65538, 2, 0, 65539, 2, 0, 65540, 3, 0, 65541, 3, 0, 65542, 2, 0, 65543, 2, 0, 65544, 2, 0, 65545, 2, 0, 65546, 2, 0, 65547, 2, 0, 65548, 2, 0, 65549, 2, 0, 65550, 3, 0, 131072, 2, 0, 131073, 2, 0, 131074, 2, 0, 131075, 2, 0, 131076, 3, 0, 131077, 3, 0, 131078, 2, 0, 131079, 2, 0, 131080, 2, 0, 131081, 2, 0, 131082, 2, 0, 131083, 2, 0, 131084, 2, 0, 131085, 3, 0, 131086, 3, 0, 196608, 2, 0, 196609, 2, 0, 196610, 2, 0, 196611, 2, 0, 196612, 3, 0, 196613, 3, 0, 196614, 3, 0, 196615, 3, 0, 196616, 2, 0, 196617, 2, 0, 196618, 2, 0, 196619, 3, 0, 196620, 3, 0, 196621, 2, 0, 196622, 2, 0, 262144, 2, 0, 262145, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 3, 0, 262150, 2, 0, 262151, 2, 0, 262152, 3, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 3, 0, 262157, 2, 0, 262158, 2, 0, 327680, 2, 0, 327681, 2, 0, 327682, 2, 0, 327683, 2, 0, 327684, 2, 0, 327685, 3, 0, 327686, 2, 0, 327687, 2, 0, 327688, 2, 0, 327689, 3, 0, 327690, 3, 0, 327691, 2, 0, 327692, 3, 0, 327693, 2, 0, 327694, 2, 0, 393216, 2, 0, 393217, 3, 0, 393218, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 3, 0, 393222, 2, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 3, 0, 393228, 3, 0, 393229, 2, 0, 393230, 2, 0, 458752, 2, 0, 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 524288, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 3, 0, 524295, 3, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0 )
+
+[node name="P1" type="AnimatedSprite" parent="Container"]
+frames = SubResource( 1 )
+centered = false
+offset = Vector2( 200, 250 )
+
+[node name="P2" type="AnimatedSprite" parent="Container"]
+frames = SubResource( 2 )
+centered = false
+offset = Vector2( 600, 250 )
+
+[node name="P1w" type="AudioStreamPlayer" parent="Container"]
+stream = ExtResource( 7 )
+
+[node name="P2w" type="AudioStreamPlayer" parent="Container"]
+stream = ExtResource( 15 )
+
+[node name="tie" type="AudioStreamPlayer" parent="Container"]
+stream = ExtResource( 14 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -10.0
+autoplay = true
+
+[node name="P1" type="MarginContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 0.0666667
+margin_left = 80.0
+margin_top = 100.0
+margin_right = -80.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="P1"]
+margin_right = 800.0
+margin_bottom = 36.0
+texture = ExtResource( 17 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="P1"]
+margin_right = 800.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Player 1 wins!"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2" type="MarginContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 0.0666667
+margin_left = 80.0
+margin_top = 100.0
+margin_right = -80.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="P2"]
+margin_right = 800.0
+margin_bottom = 36.0
+texture = ExtResource( 17 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="P2"]
+margin_right = 800.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+text = "Player 2 wins!"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tie" type="MarginContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 0.0666667
+margin_left = 80.0
+margin_top = 100.0
+margin_right = -80.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Tie"]
+margin_right = 800.0
+margin_bottom = 36.0
+texture = ExtResource( 17 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tie"]
+margin_right = 800.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.607843, 0, 1, 1 )
+text = "You both win!"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+[connection signal="animation_finished" from="Container/P1" to="." method="_on_P1_animation_finished"]
+[connection signal="animation_finished" from="Container/P2" to="." method="_on_P2_animation_finished"]
+[connection signal="finished" from="Container/P1w" to="." method="_on_P1w_finished"]
+[connection signal="finished" from="Container/P2w" to="." method="_on_P2w_finished"]
+[connection signal="finished" from="Container/tie" to="." method="_on_tie_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
