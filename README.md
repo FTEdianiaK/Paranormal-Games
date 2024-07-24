@@ -4,7 +4,7 @@
 
 ![Game screenshot](APP.png)
 
-[Full Changelog](https://github.com/FTEdianiaK/Paranormal-Games/compare/) | [License](https://github.com/FTEdianiaK/xxx/blob/main/LICENSE) | [Asset License](https://creativecommons.org/licenses/by-sa/4.0/)
+[License](https://github.com/FTEdianiaK/xxx/blob/main/LICENSE) | [Asset License](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ### Features
 
